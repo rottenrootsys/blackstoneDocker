@@ -1,0 +1,12 @@
+version: "3"
+services:
+        blackstone:
+                image: sarsys/blackstone:v1
+                container_name: blackstone
+                hostname: blackstone
+                restart: on-failure
+                stdin_open: true
+                tty: true
+                ports:
+                        - "80:80"
+                        - "3306:3306"

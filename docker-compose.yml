@@ -1,0 +1,33 @@
+version: "3"
+services:
+        blackstone:
+                image: blackstone
+                container_name: blackstone
+                hostname: blackstone
+                restart: on-failure
+                stdin_open: true
+                tty: true
+                networks:
+                        static-network:
+                                ipv4_address: 172.20.122.2
+                ports:
+                        - "80:80"
+                        - "1222:22"
+        blacksql:
+                image: blacksql
+                container_name: blacksql
+                hostname: blacksql
+                restart: on-failure
+                stdin_open: true
+                tty: true
+                networks:
+                        static-network:
+                                ipv4_address: 172.20.122.3
+                ports:
+                        - "3306:3306"
+                        - "2222:22"
+networks:
+        static-network:
+                ipam:
+                        config:
+                                - subnet: 172.20.122.0/24
