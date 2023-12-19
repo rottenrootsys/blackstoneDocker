@@ -1,0 +1,1 @@
+Este proyecto se basa en el proyecto de micro-joan, blackstone, realize 2 imagenes de su proyecto en docker y aqui tengo tanto el docker-compose de este servicio partido en 2 contenedores y la version V1 que solo posee un contenedor y se le da un docker-compose y un script el cual hay que usar
