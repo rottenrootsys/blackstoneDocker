@@ -1,7 +1,7 @@
 version: "3"
 services:
         blackstone:
-                image: blackstone
+                image: sarsys/blackstone
                 container_name: blackstone
                 hostname: blackstone
                 restart: on-failure
@@ -14,7 +14,7 @@ services:
                         - "80:80"
                         - "1222:22"
         blacksql:
-                image: blacksql
+                image: sarsys/blacksql
                 container_name: blacksql
                 hostname: blacksql
                 restart: on-failure
